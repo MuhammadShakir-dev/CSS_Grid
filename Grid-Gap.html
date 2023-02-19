@@ -1,0 +1,83 @@
+// If you want to give some space between your grids then you can use grid spacing.
+// there are three properties related to grid gap and they are.
+
+// grid-row-gap, grid-column-gap, grid-gap.
+// you can only use this property in parent container.
+// grid-gap is a short-hand of both of these properties for using it first you give row gap and then col gap.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Gap</title>
+    <style>
+        .container{
+            width: 700px;
+            height: 600px;
+            margin: 70px auto 0px auto;
+            background-color: azure;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 150px 100px 250px);
+           // grid-row-gap:5px;
+           // grid-column-gap:10px;
+          grid-gap:5px 10px;
+        }
+
+        .items1{
+            background-color: greenyellow;
+            margin:5px;
+            text-align: center;
+            line-height:40px
+        }
+
+        .items2{
+            background-color:red;
+            margin:5px;
+            text-align: center;
+            line-height:40px
+        }
+
+        .items3{
+            background-color:yellow;
+            margin:5px;
+            text-align: center;
+            line-height:40px
+        }
+
+        .items4{
+            background-color:blue;
+            margin: 5px;
+            text-align: center;
+            line-height:40px
+        }
+
+        .items5{
+            background-color: orange;
+            margin:5px;
+            text-align: center;
+            line-height:40px
+        }
+
+        .items6{
+            background-color: grey;
+            margin:5px;
+            text-align: center;
+            line-height:40px
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items1">First</div>
+        <div class="items2">Second</div>
+        <div class="items3">Third</div>
+        <div class="items4">Fourth</div>
+        <div class="items5">Fifth</div>
+        <div class="items6">Sixth</div>
+    </div>
+</body>
+</html>
+
