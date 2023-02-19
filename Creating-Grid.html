@@ -10,3 +10,83 @@ then you can apply apply the properties.
 
 // there is any another value that you can give for making rows and col and that is a funcation.
 // grid-template-rows:repaeat(3, 100px)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rows and Col</title>
+    <style>
+        /*
+            we have two properties for making CSS Grid called.
+            1. grid-template-columns
+            2. grid-template-rows
+        */
+
+        .container{
+            background-color: lightblue;
+            width: 700px;
+            margin: 70px auto 0px auto;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows:repeat(3, 1fr);
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .items1{
+            background-color: greenyellow;
+            margin:5px;
+            text-align: center;
+            line-height:40px
+        }
+
+        .items2{
+            background-color:red;
+            margin:5px;
+            text-align: center;
+            line-height:40px
+        }
+
+        .items3{
+            background-color:yellow;
+            margin:5px;
+            text-align: center;
+            line-height:40px
+        }
+
+        .items4{
+            background-color:blue;
+            margin: 5px;
+            text-align: center;
+            line-height:40px
+        }
+
+        .items5{
+            background-color: orange;
+            margin:5px;
+            text-align: center;
+            line-height:40px
+        }
+
+        .items6{
+            background-color: grey;
+            margin:5px;
+            text-align: center;
+            line-height:40px
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+            <div class="items1">First</div>
+            <div class="items2">Second</div>
+            <div class="items3">Third</div>
+            <div class="items4">Fourth</div>
+            <div class="items5">Fifth</div>
+            <div class="items6">Sixth</div>
+        </div>
+</body>
+</html>
