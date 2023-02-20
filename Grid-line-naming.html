@@ -2,3 +2,78 @@
 // the method of giving name to CSS Grid lines are called CSS Grid line nameing.
 // all names and column should be given in Grid-template-rows and Grid-temlate-rows.
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Layout</title>
+    <style>
+        .container {
+            width: 1000px;
+            background-color: lightgrey;
+            margin: 0px auto 0px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: [header-start] 80px [header-end menu-start] 50px [menu-end box-start] 100px [box-end content-start] 300px [content-end footer-start] 80px [footer-end];
+            grid-gap: 10px 10px;
+            box-sizing: border-box;
+        }
+
+        .items1 {
+            background-color: red;
+            grid-column: 1 / span 3;
+            grid-row: header-start/ header-end;
+        }
+
+        .items2 {
+            background-color: green;
+            grid-column: 1 / span 3;
+            grid-row: menu-start/ menu-end;
+        }
+
+        .items3 {
+            background-color: purple;
+            grid-row: box-start/ box-end;
+        }
+
+        .items4 {
+            background-color: hotpink;
+            grid-row: box-start/box-end;
+        }
+
+        .items5 {
+            background-color: blue;
+            grid-column: 3 / span 1;
+            grid-row: 3 / span 2;
+        }
+
+        .items6 {
+            background-color: yellow;
+            grid-column: 1 / span 2;
+            grid-row: content-start/ content-end;
+        }
+
+        .items7 {
+            background-color: lightblue;
+            grid-column: 1 / span 3;
+            grid-row: footer-start/ footer-end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="items1">Header</div>
+        <div class="items2">Menu</div>
+        <div class="items3">Box-1</div>
+        <div class="items4">Box-2</div>
+        <div class="items5">Sidebar</div>
+        <div class="items6">Content</div>
+        <div class="items7">Footer</div>
+    </div>
+</body>
+
+</html>
