@@ -10,6 +10,8 @@
 // align-content is used for alligning content vertically and it has the following values.
 // start, end, center, strectch, space-around, space-between, space-evenly.
 
+// to fill unocupied grid use: grid-auto-flow:row dense;
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +29,8 @@
             grid-template-rows: 100px 150px 100px;
             grid-gap:10px;
            /* justify-content: space-evenly; */
-          align-content:center;
+           /* align-content:center; */
+            place-content: space-evenly center;
         }
         
         .items1{
