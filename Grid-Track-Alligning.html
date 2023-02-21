@@ -1,0 +1,63 @@
+// we have three properties for alligning tracks in CSS.
+// 1. Align-content
+// 2. justify-content
+// 3. place-content
+// 3 one is a short hand of align-items and justify-content
+
+// justify content is used for aligning content horizontly and it has the followng values.
+// start, end , center, stretch, space-around, space-between, space-evenly.
+
+// align-content is used for alligning content vertically and it has the following values.
+// start, end, center, strectch, space-around, space-between, space-evenly.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-track-align</title>
+    <style>
+        .container{
+            width: 800px;
+            margin: 80px auto 0px auto;
+            background-color: lightgray;
+            display: grid;
+            grid-template-columns: repeat(2, 100px);
+            grid-template-rows: 100px 150px 100px;
+            grid-gap:10px;
+           /* justify-content: space-evenly; */
+          align-content:center;
+        }
+        
+        .items1{
+            background-color: red;
+        }
+        .items2{
+            background-color:blue;
+        }
+        .items3{
+            background-color: orange;
+        }
+        .items4{
+            background-color:hotpink;
+        }
+        .items5{
+            background-color: purple;
+        }
+        .items6{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items1">One</div>
+        <div class="items2">Two</div>
+        <div class="items3">Three</div>
+        <div class="items4">Four</div>
+        <div class="items5">Five</div>
+        <div class="items6">Six`</div>
+    </div>
+</body>
+</html>
