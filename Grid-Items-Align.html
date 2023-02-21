@@ -6,4 +6,63 @@
 // 4. align-self
 // 5. justify-self
 // 6. place-self
+// all the value that have items should be given in parent container or if you want to position a singel div then you can use self values.
+// Align-items are used for align any item vertically and justy item or justify self are used for aligning anything horizontilly.
+// place-item is a short-hand of align-items and justify-items.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-Item-Allign</title>
+    <style>
+        .container{
+            width: 800px;
+            margin: 80px auto 0px auto;
+            background-color: lightgray;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 100px 150px 100px;
+          /*  grid-gap:10px 10px;
+            align-items: center; */
+            place-items: center center;
+        }
+        
+        .items1{
+            background-color: red;
+        }
+        .items2{
+            background-color:blue;
+        }
+        .items3{
+            background-color: orange;
+            align-self: end;
+            justify-self: center;
+        }
+        .items4{
+            background-color:hotpink;
+            align-self: flex-start;
+            justify-self: center;
+        }
+        .items5{
+            background-color: purple;
+        }
+        .items6{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+      <div class="container">
+        <div class="items1">One</div>
+        <div class="items2">Two</div>
+        <div class="items3">Three</div>
+        <div class="items4">Four</div>
+        <div class="items5">Five</div>
+        <div class="items6">Six</div>
+    </div>
+</body>
+</html>
 
