@@ -2,3 +2,43 @@
 // In grid-autofill you can adjest the div upto the end of the track untill the space are remains.
 // In grid-autofit you can ajest only one div but not more than one div.
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-fit-fill</title>
+    <style>
+        .container{
+            width: 600px;
+            margin: 50px auto 0px auto;
+            background-color: lightgray;
+            display: grid;
+            grid-template-columns: repeat(Auto-fill, 100px);
+            grid-template-rows: repeat(2, 100px);
+        }
+
+        .items1{
+            background-color: red;
+        }
+        .items2{
+            background-color: blue;
+        }
+        .items3{
+            background-color: hotpink;
+        }
+        .items4{
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items1">One</div>
+        <div class="items2">Two</div>
+        <div class="items3">Three</div>
+        <div class="items4">Four</div>
+    </div>
+</body>
+</html>
