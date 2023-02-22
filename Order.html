@@ -1,1 +1,58 @@
+// grid-order is the new way to positionning CSS Grid.
+// it has a value between 1 to 9 normally. 0 = order first and 1 = last order
+// it is super usefull in making mobile layouts and tablets layouts.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <style>
+        .container{
+            width: 600px;
+            margin: 50px auto 0px auto;
+            background-color: lightgray;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 100px);
+        }
+        
+        .items1{
+            background-color: lightblue;
+            order: 3;
+        }
+        .items2{
+            background-color: red;
+            order: 2;
+        }
+        .items3{
+            background-color: orange;
+            order: 1;
+        }
+        .items4{
+            background-color: hotpink;
+            order: 4;
+        }
+        .items5{
+            background-color: aquamarine;
+            order: 5;
+        }
+        .items6{
+            background-color: lightgreen;
+            order: 6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items1">one</div>
+        <div class="items2">two</div>
+        <div class="items3">three</div>
+        <div class="items4">four</div>
+        <div class="items5">five</div>
+        <div class="items6">six</div>
+    </div>
+</body>
+</html>
 
