@@ -1,1 +1,90 @@
+// nested grids helps you to create multiple grids inside of a single div or grid.
+// if you to create multiple divs inside a single div then you should first give that div display:grid; by doing thisthis item will take the 
+propertoies of a grid container.
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested-Grids</title>
+    <style>
+        .container{
+            width: 600px;
+            margin: 50px auto 0px auto;
+            background-color: lightgray;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 100px);
+            grid-gap:10px
+        }
+
+        .items1{ 
+            background-color: rgb(194, 147, 60);
+            display: grid; 
+        }
+        .items1 > div{
+            background-color: white;
+        }
+
+        .items2{ 
+            background-color: blue;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap:5px
+        }
+        .items2 > div{
+            background-color:lightgray;
+        }
+
+        .items3{
+             background-color: hotpink;
+             display: grid;
+             grid-template-columns: repeat(2, 1fr);
+             grid-gap:5px;
+        }
+        .items3 > div{
+            background-color: blue;
+        }
+
+
+        .items4{ 
+            background-color: lightgreen;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap:5px;
+        }
+        .items4 > div{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="items1">One
+            <div class="subitems">1.1</div>
+        </div>
+
+        <div class="items2">Two
+            <div class="subitems2">2.1</div>
+            <div class="subitems2">2.2</div>
+        </div>
+
+        <div class="items3">Three
+            <div class="subitems3">3.1</div>
+            <div class="subitems3">3.2</div>
+            <div class="subitems3">3.3</div>
+        </div>
+
+        <div class="items4">Four
+            <div class="subitems">4.1</div>
+            <div class="subitems">4.2</div>
+            <div class="subitems">4.3</div>
+            <div class="subitems">4.4</div>
+        </div>
+
+    </div>
+</body>
+</html>
