@@ -1,1 +1,52 @@
+// Fit-content work same as maximum width in CSS.
+// actually fit content works accorndlingly to your text size. like if you set fit-content(150px) then it means your div or grid-item can goto the 
+// maximun size of 150px .
+// it's super usefull for making a image gallery.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fit-content</title>
+    <style>
+        .container{
+            width: 600px;
+            margin: 50px auto 0px auto;
+            background-color: lightgray;
+            display: grid;
+            grid-template-columns: fit-content(100px) fit-content(200px) 1fr;
+            grid-template-rows: repeat(2, minmax(100px, min-content));
+        }
 
+        .items1{
+            background-color: lightblue;
+        }
+        .items2{
+            background-color: red;
+        }
+        .items3{
+            background-color: orange;
+        }
+        .items4{
+            background-color: hotpink;
+        }
+        .items5{
+            background-color: aquamarine;
+        }
+        .items6{
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items1">One Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, ad?</div>
+        <div class="items2">Two Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias atque eius animi enim tempora quasi itaque vel alias quibusdam dolor?</div>
+        <div class="items3">Three</div>
+        <div class="items4">Four</div>
+        <div class="items5">Five</div>
+        <div class="items6">Six</div>
+    </div>
+</body>
+</html>
